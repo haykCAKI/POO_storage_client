@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojas ABC</title>
+    <link rel="stylesheet" href="source/style/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lojas ABC</h1>
+    </header>
+    <div id="container">
+        <section>
+            <h2>Armazenamento de Dados dos Clientes</h2>
+            <form id="formularioCliente">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome" id="nome" required>
+                <br><br>
+                <label for="dataDeNascimento">Data de Nascimento:</label>
+                <input type="date" name="dataDeNascimento" id="dataDeNascimento" required>
+                <br><br>
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="12345678910" required>
+                <br><br>
+                <label for="origem">Origem:</label>
+                <select name="origem" id="origem" required>
+                    <option value="Loja">Loja</option>
+                    <option value="Site">Site</option>
+                </select>
+                <br><br>
+                <label for="score">Score (0 - 1000):</label>
+                <input type="number" name="score" id="score" min="0" max="1000" required>
+                <br><br>
+                <button type="button" id="cadastrarCliente-Btn">Cadastrar Cliente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Cadastro do Produto</h2>
+            <form id="formularioProduto">
+                <label for="nomeProduto">Nome do Produto:</label>
+                <input type="text" name="nomeProduto" id="nomeProduto" required>
+                <br><br>
+                <label for="valorProduto">Valor do Produto R$:</label>
+                <input type="number" name="valorProduto" id="valorProduto" required>
+                <br><br>
+                <label for="categoriaProduto">Categoria Produto:</label>
+                <select name="categoria" id="categoria">
+                    <option value="Eletronico">Eletronico</option>
+                    <option value="Acessorio">Acessorio</option>
+                    <option value="Roupa">Roupa</option>
+                </select>
+                <br><br>
+                <button type="button" id="cadastrarProduto-Btn">Cadastrar Produto</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Cadastro de Vendedor</h2>
+            <form id="formularioVendedor">
+                <label for="nomeVendedor">Nome do Vendedor:</label>
+                <input type="text" id="nomeVendedor" required>
+                <br><br>
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" placeholder="123456" required>
+                <br><br>
+                <button type="button" id="cadastrarVendedor-Btn">Cadastrar Vendedor</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Cadastro do Pedido</h2>
+            <form id="formularioPedido">
+                <label for="pedidoCliente">Cliente (CPF):</label>
+                <input type="text" name="pedidoCliente" id="pedidoCliente" placeholder="12345678910" required>
+                <br><br>
+                <label for="dataPedido">Data do Pedido:</label>
+                <input type="date" id="dataPedido" required>
+                <br><br>
+                <label for="vendedorPedido">Vendedor (Matrícula):</label>
+                <input type="text" id="vendedorPedido" placeholder="123456" required>
+                <br><br>
+                <label for="produtoPedido">Produto:</label>
+                <input type="text" id="produtoPedido" required>
+                <br><br>
+                <label for="valorPedido">Valor do Produto:</label>
+                <input type="number" id="valorPedido" required>
+                <br><br>
+                <button type="button" id="cadastrarPedido-Btn">Cadastrar Pedido</button>
+            </form>
+        </section>
+
+        <section>
+            <button type="button" id="consultarDados-btn">Consultar Todos os Dados</button>
+            <button type="button" id="resetarDados-btn">Resetar dados</button>
+        </section>
+
+        <section>
+            <h2>Consultar Dados do Cliente</h2>
+            <label for="consultarCPF">Informe o CPF:</label>
+            <input type="text" name="consultarCPF" id="consultarCPF">
+            <button type="button" id="fazerConsulta">Fazer consulta</button>
+        </section>
+
+    </div>
+
+    <div id="consultaEspefica" style="display: none;">
+        <h2>Cliente</h2>
+        <div id="resultadoConsulta"></div>
+        <button type="button" id="sairConsulta">sair</button>
+    </div>
+
+    <div id="consultarDados" style="display: none;">
+        <div id="mostrarDados"></div>
+        <button type="button" id="limparDados-btn">Fechar Lista</button>
+    </div>
+
+    <script src="source/js/dom.js"></script>
+    <script src="source/js/classes.js"></script>
+</body>
+
+</html>
