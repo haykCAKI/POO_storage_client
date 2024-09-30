@@ -22,7 +22,7 @@ Este projeto é um sistema simples que permite o cadastro de clientes, produtos,
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    git clone https://github.com/seu-usuario/POO_storage_client.git
     ```
 
 2. Abra o arquivo `index.html` no navegador para visualizar e testar o sistema.
